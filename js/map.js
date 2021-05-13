@@ -10,6 +10,8 @@ var map = new mapboxgl.Map({
   zoom: 3.0
 });
 
+map.scrollZoom.disable();
+
 fetch("daily-virus.json")
   .then((response) => response.json())
   .then((data) => {
