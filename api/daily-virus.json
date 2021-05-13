@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": "0FOJefeLxQYXQ1CnJm9o",
+      "longitude": -2.5895,
+      "lastUpdated": "2021-05-13T13:13:09.828Z",
+      "dead": 14,
+      "name": "Guernsey",
+      "pop": 63196,
+      "infected": 822,
+      "recovered": 808,
+      "vaccinated": 32969,
+      "alwaysShow": false,
+      "latitude": 49.4482,
+      "country": "CA",
+      "sick": 0,
+      "invisible": false
+    },
