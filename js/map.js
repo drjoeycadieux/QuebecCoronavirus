@@ -7,11 +7,8 @@ var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/dark-v10",
   center: [-96.052335, 39.159882],
-  zoom: 4.0
+  zoom: 3.0
 });
-
-// disable map zoom when using scroll
-map.scrollZoom.disable();
 
 fetch("daily-virus.json")
   .then((response) => response.json())

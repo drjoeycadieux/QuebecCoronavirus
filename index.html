@@ -21,10 +21,11 @@
       integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q=="
       crossorigin="anonymous"
     />
+    <!-- CSS only -->
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
-      integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
     <link
@@ -35,120 +36,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="icon" type="image/png" href="assets/logo.png" />
-    <title>Covid-19 Tracker | Coronavirus</title>
+    <title>Covid-19 Tracker | Info Covid-19</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+      <div class="container">
         <a class="navbar-brand" href="index.html"
-          >Covid-19 Tracker - Coronavirus</a
+          >Covid-19 Tracker | Info Covid-19</a
         >
         <button
           class="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarColor01"
-          aria-controls="navbarColor01"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html"
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
                 >Home
-                <span class="visually-hidden"></span>
+                <span class="sr-only"></span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="map.html">Map</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="about.html">About</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >More</a
-              >
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
 
-    <div class="bg-gray-800">
-      <div class="container mx-auto py-10 px-2">
-        <div class="w-full text-center">
-          <h1 class="text-white uppercase">
-            Covid-19 Tracker Coronavirus | Info Covid-19
-          </h1>
-        </div>
-      </div>
-
-      <div class="bg-gray-700 p-12">
-        <div class="container mx-auto py-10 px-12">
-          <div class="w-full text-center">
-            <p class="text-white text-center text-1xl font-bold">
-              A computer programmer, sometimes called a software developer, a
-              programmer or more recently a coder, is a person who creates
-              computer software. The term computer programmer can refer to a
-              specialist in one area of computers, or to a generalist who writes
-              code for many kinds of software.
-            </p>
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="font-weight-light">
+              We were the first tracking project in Canada and one of the first
+              in the world to offer an API (application programming interface)
+              for our COVID-19 data, allowing others to freely and easily access
+              our data in real-time.
+            </h1>
+            <p class="lead">Developed By Joey CAdieux</p>
           </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="bg-blue-700 p-12">
-      <div class="container mx-auto py-10 px-12">
-        <div class="w-full text-center">
-          <h1 class="text-white text-center text-2xl font-bold">
-            Experience live storm chasing & watch top storm chasers stream
-            dashboard video of tornados and extreme weather as it happens.
-          </h1>
-        </div>
+    <!-- Page Content -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="font-weight-light">
+          Some things you need to know about the dataset
+        </h2>
+        <p>
+          While most case and other data is completely accurate, there are some
+          unavoidable assumptions that have been required in order to present a
+          complete dataset. Some provinces don't report every day, data released
+          by some provinces has been later retracted or modified, and
+          definitions for 'recovered' or even region boundaries have changed.
+        </p>
       </div>
-    </div>
+    </section>
 
     <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-6">
-            <h6>Severe Storms Media</h6>
+            <h6>Covid-19 Tracker | Info Coronavirus</h6>
             <p class="text-justify">
-              severestormsmedia.com is the leader in live severe weather
-              streaming. Using technology and processes perfected by
+              Covid-19 Tracker | Info Coronavirus is the leader in live severe
+              weather streaming. Using technology and processes perfected by
               SevereStormsMedia, storm chasers are able to stream live video
               while actively storm chasing tornados and storms to the
               SevereStudios Live Chase Cam Network. These Live Chase Cam streams
