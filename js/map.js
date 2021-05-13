@@ -6,14 +6,12 @@ mapboxgl.accessToken = mapbox_token;
 var map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/dark-v10",
-  center: [-73.5673, 45.5017],
-  zoom: 3.0
+  center: [-71.208, 46.8139],
+  zoom: 6.0
 });
 
 // disable map zoom when using scroll
 map.scrollZoom.disable();
-
-// Storm Prediction Center -> Spcd Day 1 //
 
 map.on("load", function () {
   var layers = map.getStyle().layers;
@@ -41,8 +39,6 @@ map.on("load", function () {
     }
   });
 });
-
-// warning watches
 
 map.on("load", function () {
   map.addSource("places", {
@@ -119,7 +115,7 @@ map.on("load", function () {
       ]
     }
   });
-  // Add a layer showing the places.
+
   map.addLayer({
     id: "places",
     type: "circle",
@@ -132,28 +128,21 @@ map.on("load", function () {
     }
   });
 
-  // Create a popup, but don't add it to the map yet.
   var popup = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: false
   });
 
   map.on("mouseenter", "places", function (e) {
-    // Change the cursor style as a UI indicator.
     map.getCanvas().style.cursor = "pointer";
 
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description = e.features[0].properties.description;
 
-    // Ensure that if the map is zoomed out such that multiple
-    // copies of the feature are visible, the popup appears
-    // over the copy being pointed to.
     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
 
-    // Populate the popup and set its coordinates
-    // based on the feature found.
     popup.setLngLat(coordinates).setHTML(description).addTo(map);
   });
 
