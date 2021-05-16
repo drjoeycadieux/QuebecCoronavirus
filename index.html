@@ -48,7 +48,7 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light font-bold mb-10 shadow fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html"
           >Covid-19 Tracker | Info Covid-19</a
@@ -84,26 +84,14 @@
             <li class="nav-item">
               <a class="nav-link" href="notes.html">Notes</a>
             </li>
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                id="dropdownMenu2"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="fab fa-github"></i> Github
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Github Repo</button>
-                <button class="dropdown-item" type="button">
-                  Edit Master
-                </button>
-                <button class="dropdown-item" type="button">
-                  Create Issues
-                </button>
-              </div>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModalLong"
+            >
+              Emergency measures
+            </button>
             </div>
           </ul>
         </div>
@@ -121,14 +109,14 @@
               public health, and data science.
             </h1>
             <p class="lead">Developed By Joey Cadieux</p>
-            <button
+            <!-- <button
               type="button"
               class="btn btn-danger"
               data-toggle="modal"
               data-target="#exampleModalLong"
             >
               Emergency measures
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
@@ -186,7 +174,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">
-              Close
+              REFUSE
             </button>
             <button type="button" class="btn btn-success">
               ACCEPT Emergency Measures
