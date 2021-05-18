@@ -14,7 +14,7 @@ map.scrollZoom.disable();
 
 map.on('load', function() {
     // Add a data source containing GeoJSON data.
-    map.addSource('maine', {
+    map.addSource('covid-data', {
         'type': 'geojson',
         'data': {
             'type': 'Feature',
@@ -34,9 +34,9 @@ map.on('load', function() {
 
     // Add a new layer to visualize the polygon.
     map.addLayer({
-        'id': 'maine',
+        'id': 'covid-data',
         'type': 'fill',
-        'source': 'maine', // reference the data source
+        'source': 'covid-data', // reference the data source
         'layout': {},
         'paint': {
             'fill-color': 'red', // blue color fill
@@ -47,7 +47,7 @@ map.on('load', function() {
     map.addLayer({
         'id': 'outline',
         'type': 'line',
-        'source': 'maine',
+        'source': 'covid-data',
         'layout': {},
         'paint': {
             'line-color': '#000',
