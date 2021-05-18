@@ -5,26 +5,53 @@ mapboxgl.accessToken = mapbox_token;
 
 var map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/mapbox/dark-v10",
-    center: [-96.052335, 39.159882],
-    zoom: 3.0
+    style: "mapbox://styles/mapbox/light-v10",
+    center: [- 73.5673, 45.5017],
+    zoom: 8.0
 });
 
 map.scrollZoom.disable();
 
-fetch("/daily-virus.json")
-    .then(response => response.json())
-    .then(data => {
-        const { places, reports } = data;
-
-        reports
-            .filter(report => !report.hide)
-            .forEach(report => {
-                const { infected, placeId } = report;
-                const currentPlace = places.find(place => place.id === placeId);
-
-                new mapboxgl.Marker({})
-                    .setLngLat([currentPlace.longitude, currentPlace.latitude])
-                    .addTo(map);
-            });
+map.on('load', function() {
+    // Add a data source containing GeoJSON data.
+    map.addSource('maine', {
+        'type': 'geojson',
+        'data': {
+            'type': 'Feature',
+            'geometry': {
+                'type': 'Polygon',
+                // These coordinates outline Maine.
+                'coordinates': [
+                    [
+                        [- 73.5673, 45.5017],
+                        [-73.7990, 45.4720],
+                        [-73.8206, 45.4896]
+                    ]
+                ]
+            }
+        }
     });
+
+    // Add a new layer to visualize the polygon.
+    map.addLayer({
+        'id': 'maine',
+        'type': 'fill',
+        'source': 'maine', // reference the data source
+        'layout': {},
+        'paint': {
+            'fill-color': 'red', // blue color fill
+            'fill-opacity': 0.5
+        }
+    });
+    // Add a black outline around the polygon.
+    map.addLayer({
+        'id': 'outline',
+        'type': 'line',
+        'source': 'maine',
+        'layout': {},
+        'paint': {
+            'line-color': '#000',
+            'line-width': 3
+        }
+    });
+});
