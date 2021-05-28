@@ -17,11 +17,15 @@
 	</script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
 	 crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+	 crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+	 crossorigin="">
+	</script>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<link rel="stylesheet" href="css/style.css" />
-	<link href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css" rel="stylesheet" />
 	<link rel="icon" type="image/png" href="assets/logo.png" />
 	<title>Covid-19 Tracker | Info-Covid-19 Map</title>
 </head>
@@ -92,22 +96,7 @@
       </div>
     </nav>
 
-
-
-    <div id="state-legend" class="legend">
-<h4>alert levels map</h4>
-<div><span style="background-color: #ff0000"></span>Level 4–Maximum Alert
-</div>
-<div><span style="background-color: #ff4000"></span>Level 3–Alert</div>
-<div><span style="background-color: #ffbf00"></span>Level 2–Early Warning
-</div>
-<div><span style="background-color: #808080"></span>Special management</div>
-<!--<div><span style="background-color: #ca8323"></span>2,500,000</div>
-<div><span style="background-color: #da9c20"></span>1,000,000</div>
-<div><span style="background-color: #e6b71e"></span>750,000</div>
-<div><span style="background-color: #eed322"></span>500,000</div>
-<div><span style="background-color: #f2f12d"></span>0</div>-->
-</div>
+    
 
     <!-- <div class="sidenav">
       <a href="#">Contact</a>
@@ -116,9 +105,8 @@
       <a href="#">Latest Release</a>
     </div> -->
 
-    <div id="map"></div>
-    <p>Canada Covid-19 Tracker</p>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    
+     <div id="mapid"></div>
     <script type="module" src="js/map.js"></script>
     <script src="js/console.js"></script>
   </body>
