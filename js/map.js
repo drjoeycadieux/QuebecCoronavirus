@@ -1,7 +1,8 @@
-fetch('https://api.covid19api.com/countries')
-.then(res => console.log(res))
-
-
+fetch('https://api.covid19api.com/summary')
+.then(res => res.json())
+.then(data => {
+  console.log(data);
+});
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoiam9leWNyZWF0b3IiLCJhIjoiY2tva253dHRxMDFhMzJubzF0NmNidTV1byJ9.fuQQQ11Nb0tnr-jbWemOsQ';
 var map = new mapboxgl.Map({
