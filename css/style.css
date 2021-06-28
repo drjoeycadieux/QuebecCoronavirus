@@ -3,6 +3,13 @@
   height: 100%;
   position: absolute;
 }
+.mapbox-attribution-container {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  margin: 0 10 5;
+}
 * {
   margin: 0;
   padding: 0;
