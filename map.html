@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3NJBSHXKHR">
-
-	</script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3NJBSHXKHR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
 
       gtag("config", "G-3NJBSHXKHR");
-	</script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
-	 crossorigin="anonymous" />
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<link rel="stylesheet" href="css/style.css" />
-	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'>
-
-	</script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-
-	<link rel="icon" type="image/png" href="assets/logo.png" />
-	<title>Covid-19 Tracker | Info-Covid-19 Map</title>
-</head>
-
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="index.html">Covid-19 | Info-Covid-19.</a>
-			<button
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css"
+      integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <title>Covid-19 Tracker | Info-Covid-19 Map</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Covid-19 | Info-Covid-19.</a>
+        <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -96,18 +98,16 @@
       </div>
     </nav>
 
-    
+    <!-- <div class="sidenav">
+      <a href="#">Contact</a>
+      <a href="#">Found An Issues!</a>
+      <a href="#">Tech-Center</a>
+      <a href="#">Latest Release</a>
+    </div> -->
 
-     <div class="mapbox-attribution-container">
-   <a href="https://www.mapbox.com/about/maps/">© Mapbox | </a>
-   <a href="http://www.openstreetmap.org/copyright">© OpenStreetMap | </a>
-   <a href="https://www.mapbox.com/map-feedback/" target="_blank"><strong>Improve this map</strong></a>
- </div>
-   
-  <div id='map'></div>
-
-
-    <script src="js/console.js"></script> 
-    <script src="js/map.js"></script>
+    <div id="map"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <script type="module" src="js/map.js"></script>
+    <script src="js/console.js"></script>
   </body>
 </html>
